@@ -1,0 +1,160 @@
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+  }
+
+  /* Header logo and animation */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%);
+  }
+
+  header.active {
+    transform: translateY(0);
+  }
+
+  .logo {
+    max-height: 90px;
+    transition: opacity 0.5s ease-in-out;
+    
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+  }
+
+  nav a:hover {
+    color: #00208a;
+  }
+
+  /* Curved diagonal sections */
+  .wave-container {
+    position: relative;
+  }
+
+  .wave {
+    width: 100%;
+    height: 100px;
+    background: black;
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 60%);
+  }
+
+  /* Diagonal wave effect */
+  .wave-inverted {
+    background: white;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  /* Image placeholder for wave */
+  .wave-image {
+    background-image: url('https://img.freepik.com/premium-vector/wave-lines-seamless-pattern-undulate-stripes-repeating-background-black-white-diagonal-wavy_497399-1648.jpg');
+    background-size: fill;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100px;
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+  }
+
+  /* Section padding and text styling */
+  section {
+    padding: 100px 20px;
+  }
+
+  h1, h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+  }
+
+  p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+  }
+
+  .rounded-btn {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+  }
+
+  .rounded-btn:hover {
+    color: #002277;
+  }
+
+  /* Footer styling */
+  footer {
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Animation effect */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s ease-in-out forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .zoom-in {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: zoomIn 1.5s ease forwards;
+  }
+
+  @keyframes zoomIn {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /*arallax effect */
+  .parallax {
+    background-attachment: fixed;
+    background-size: fill;
+  }
+
+  .background-image-1 {
+    background-image: url('https://img.freepik.com/premium-vector/wave-lines-seamless-pattern-undulate-stripes-repeating-background-black-white-diagonal-wavy_497399-1648.jpg');
+  }
+
+  .background-image-2 {
+    background-image: url('https://img.freepik.com/premium-vector/wave-lines-seamless-pattern-undulate-stripes-repeating-background-black-white-diagonal-wavy_497399-1648.jpg');
+  } .background-image-3 {
+    background-image: url('https://img.freepik.com/premium-vector/wave-lines-seamless-pattern-undulate-stripes-repeating-background-black-white-diagonal-wavy_497399-1648.jpg');
+  }
+
+  /*hover animation on buttons */
+  .rounded-btn {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .rounded-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 30px 20px rgba(255, 255, 255, 0.2);
+    background-color: #f1f1f1;
+  }
